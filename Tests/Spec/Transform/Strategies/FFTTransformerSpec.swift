@@ -4,7 +4,7 @@ import Nimble
 import Accelerate
 
 final class FFTTransformerSpec: QuickSpec {
-  override func spec() {
+  override class func spec() {
     describe("FFTTransformer") {
       var transformer: FFTTransformer!
 
