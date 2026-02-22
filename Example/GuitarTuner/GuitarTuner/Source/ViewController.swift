@@ -2,10 +2,9 @@ import UIKit
 import Beethoven
 import Pitchy
 import Hue
-import Cartography
 
 final class ViewController: UIViewController {
-  lazy var noteLabel: UILabel = {
+  private lazy var noteLabel: UILabel = {
     let label = UILabel()
     label.text = "--"
     label.font = UIFont.boldSystemFont(ofSize: 65)
@@ -16,7 +15,7 @@ final class ViewController: UIViewController {
     return label
   }()
 
-  lazy var offsetLabel: UILabel = {
+  private lazy var offsetLabel: UILabel = {
     let label = UILabel()
     label.font = UIFont.systemFont(ofSize: 28)
     label.textColor = UIColor.white
@@ -26,7 +25,7 @@ final class ViewController: UIViewController {
     return label
   }()
 
-  lazy var actionButton: UIButton = { [unowned self] in
+  private lazy var actionButton: UIButton = { [unowned self] in
     let button = UIButton(type: .system)
     button.layer.cornerRadius = 20
     button.backgroundColor = UIColor(hex: "3DAFAE")
@@ -34,13 +33,13 @@ final class ViewController: UIViewController {
     button.setTitleColor(UIColor.white, for: UIControl.State())
 
     button.addTarget(self, action: #selector(ViewController.actionButtonDidPress(_:)),
-      for: .touchUpInside)
+                     for: .touchUpInside)
     button.setTitle("Start".uppercased(), for: UIControl.State())
 
     return button
   }()
 
-  lazy var pitchEngine: PitchEngine = { [weak self] in
+  private lazy var pitchEngine: PitchEngine = { [weak self] in
     let config = Config(estimationStrategy: .yin)
     let pitchEngine = PitchEngine(config: config, delegate: self)
     pitchEngine.levelThreshold = -30.0
@@ -66,13 +65,13 @@ final class ViewController: UIViewController {
 
   @objc func actionButtonDidPress(_ button: UIButton) {
     let text = pitchEngine.active
-      ? NSLocalizedString("Start", comment: "").uppercased()
-      : NSLocalizedString("Stop", comment: "").uppercased()
+    ? NSLocalizedString("Start", comment: "").uppercased()
+    : NSLocalizedString("Stop", comment: "").uppercased()
 
     button.setTitle(text, for: .normal)
     button.backgroundColor = pitchEngine.active
-      ? UIColor(hex: "3DAFAE")
-      : UIColor(hex: "E13C6C")
+    ? UIColor(hex: "3DAFAE")
+    : UIColor(hex: "E13C6C")
 
     noteLabel.text = "--"
     pitchEngine.active ? pitchEngine.stop() : pitchEngine.start()
@@ -83,27 +82,52 @@ final class ViewController: UIViewController {
 
   func setupLayout() {
     let totalSize = UIScreen.main.bounds
+    NSLayoutConstraint.activate(
+      [
 
-    constrain(actionButton, noteLabel, offsetLabel) {
-      actionButton, noteLabel, offsetLabel in
+        actionButton.topAnchor.constraint(
+          equalTo: view.safeAreaLayoutGuide.topAnchor,
+          constant: (totalSize.height - 30) / 2
+        ),
+        actionButton.centerXAnchor
+          .constraint(
+            equalTo: view.safeAreaLayoutGuide.centerXAnchor
+          ),
 
-      let superview = actionButton.superview!
+        actionButton.widthAnchor.constraint(equalToConstant: 280),
+        actionButton.heightAnchor.constraint(equalToConstant: 50),
 
-      actionButton.top == superview.top + (totalSize.height - 30) / 2
-      actionButton.centerX == superview.centerX
-      actionButton.width == 280
-      actionButton.height == 50
+        offsetLabel.bottomAnchor
+          .constraint(
+            equalTo: actionButton.topAnchor,
+            constant: -60
+          ),
 
-      offsetLabel.bottom == actionButton.top - 60
-      offsetLabel.leading == superview.leading
-      offsetLabel.trailing == superview.trailing
-      offsetLabel.height == 80
+        offsetLabel.leadingAnchor
+          .constraint(
+            equalTo: view.safeAreaLayoutGuide.leadingAnchor,
+            constant: 16
+          ),
+        offsetLabel.trailingAnchor
+          .constraint(
+            equalTo: view.safeAreaLayoutGuide.trailingAnchor,
+            constant: -16
+          ),
+        offsetLabel.heightAnchor.constraint(equalToConstant: 80),
 
-      noteLabel.bottom == offsetLabel.top - 20
-      noteLabel.leading == superview.leading
-      noteLabel.trailing == superview.trailing
-      noteLabel.height == 80
-    }
+        noteLabel.bottomAnchor.constraint(equalTo:  offsetLabel.topAnchor, constant: -20),
+        noteLabel.leadingAnchor
+          .constraint(
+            equalTo: view.safeAreaLayoutGuide.leadingAnchor,
+            constant: 16
+          ),
+        noteLabel.trailingAnchor
+          .constraint(
+            equalTo: view.safeAreaLayoutGuide.trailingAnchor,
+            constant: -16
+          ),
+        noteLabel.heightAnchor.constraint(equalToConstant: 80)
+      ])
   }
 
   // MARK: - UI

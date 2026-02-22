@@ -8,5 +8,12 @@ let package = Package(
     ],
     targets: [
         .target(name: "Beethoven", dependencies: [], path: "Source")
+    ],
+    dependencies: [
+        .package(
+            url: "url: "https://github.com/ajc6432/Pitchy",
+                .branch("master")
+        )
+
     ]
 )
