@@ -1,0 +1,33 @@
+{
+  "originHash" : "c1ac3c192d1ad9028172e85fb3d22e9f0563437bad962f139b861ab25144be9e",
+  "pins" : [
+    {
+      "identity" : "beethoven",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ajc6432/Beethoven",
+      "state" : {
+        "branch" : "master",
+        "revision" : "74e205c3b58aa6322ccc1f061ec0ae403d2ce331"
+      }
+    },
+    {
+      "identity" : "hue",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/zenangst/Hue",
+      "state" : {
+        "revision" : "b9d920cee4ba795fefb828d130744eee1e3d2feb",
+        "version" : "5.0.1"
+      }
+    },
+    {
+      "identity" : "pitchy",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ajc6432/Pitchy",
+      "state" : {
+        "branch" : "master",
+        "revision" : "a28b61148694c114cb50113a351055c41e27de09"
+      }
+    }
+  ],
+  "version" : 3
+}
