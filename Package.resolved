@@ -1,0 +1,15 @@
+{
+  "originHash" : "e58a1b28451fcd1f627020c79ce9cc7e97cbf9c88718445e73722d861a5c0746",
+  "pins" : [
+    {
+      "identity" : "pitchy",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ajc6432/Pitchy",
+      "state" : {
+        "branch" : "master",
+        "revision" : "a28b61148694c114cb50113a351055c41e27de09"
+      }
+    }
+  ],
+  "version" : 3
+}
