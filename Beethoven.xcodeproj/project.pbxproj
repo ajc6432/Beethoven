@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C35D3C22F4ABC7400C859D2 /* Pitchy in Frameworks */ = {isa = PBXBuildFile; productRef = 4C35D3C12F4ABC7400C859D2 /* Pitchy */; };
+		4C35D3C52F4ABD6A00C859D2 /* Pitchy in Frameworks */ = {isa = PBXBuildFile; productRef = 4C35D3C42F4ABD6A00C859D2 /* Pitchy */; };
+		4C35D3C82F4ABD9500C859D2 /* Pitchy in Frameworks */ = {isa = PBXBuildFile; productRef = 4C35D3C72F4ABD9500C859D2 /* Pitchy */; };
+		4C35D3CD2F4AC49A00C859D2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C35D3CB2F4AC49A00C859D2 /* AVFoundation.framework */; };
 		4C8039962F4AB72500CB6493 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 4C8039952F4AB72500CB6493 /* Nimble */; };
 		4C8039992F4AB73700CB6493 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 4C8039982F4AB73700CB6493 /* Quick */; };
-		4C80399C2F4AB7C500CB6493 /* Pitchy in Frameworks */ = {isa = PBXBuildFile; productRef = 4C80399B2F4AB7C500CB6493 /* Pitchy */; };
+		4C80399F2F4ABB9700CB6493 /* Pitchy in Frameworks */ = {isa = PBXBuildFile; productRef = 4C80399E2F4ABB9700CB6493 /* Pitchy */; };
+		4C8039A22F4ABBD800CB6493 /* Pitchy in Frameworks */ = {isa = PBXBuildFile; productRef = 4C8039A12F4ABBD800CB6493 /* Pitchy */; };
 		AF3190521DABE01600C897CA /* YINTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3190511DABE01600C897CA /* YINTransformer.swift */; };
 		AFFF3FF11DB633B4004AD9D9 /* YINEstimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFF3FF01DB633B4004AD9D9 /* YINEstimator.swift */; };
 		D51575B61C343B77006F8E75 /* Beethoven.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D51575AB1C343B77006F8E75 /* Beethoven.framework */; };
@@ -56,6 +61,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C35D3CA2F4AC49A00C859D2 /* AVFAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFAudio.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/System/Library/Frameworks/AVFAudio.framework; sourceTree = DEVELOPER_DIR; };
+		4C35D3CB2F4AC49A00C859D2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
 		AF3190511DABE01600C897CA /* YINTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = YINTransformer.swift; sourceTree = "<group>"; tabWidth = 2; };
 		AFFF3FF01DB633B4004AD9D9 /* YINEstimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YINEstimator.swift; sourceTree = "<group>"; };
 		D51575AB1C343B77006F8E75 /* Beethoven.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Beethoven.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,7 +106,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C80399C2F4AB7C500CB6493 /* Pitchy in Frameworks */,
+				4C35D3C82F4ABD9500C859D2 /* Pitchy in Frameworks */,
+				4C80399F2F4ABB9700CB6493 /* Pitchy in Frameworks */,
+				4C8039A22F4ABBD800CB6493 /* Pitchy in Frameworks */,
+				4C35D3C22F4ABC7400C859D2 /* Pitchy in Frameworks */,
+				4C35D3CD2F4AC49A00C859D2 /* AVFoundation.framework in Frameworks */,
+				4C35D3C52F4ABD6A00C859D2 /* Pitchy in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +128,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C35D3C92F4AC49A00C859D2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C35D3CA2F4AC49A00C859D2 /* AVFAudio.framework */,
+				4C35D3CB2F4AC49A00C859D2 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D51575A11C343B77006F8E75 = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +144,7 @@
 				D55C02031DBD210600575260 /* Project */,
 				D59CB1361C345E0A00290B63 /* Source */,
 				D55C01F51DBD210600575260 /* Tests */,
+				4C35D3C92F4AC49A00C859D2 /* Frameworks */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -389,7 +411,7 @@
 			packageReferences = (
 				4C8039942F4AB72500CB6493 /* XCRemoteSwiftPackageReference "Nimble" */,
 				4C8039972F4AB73700CB6493 /* XCRemoteSwiftPackageReference "Quick" */,
-				4C80399A2F4AB7C500CB6493 /* XCRemoteSwiftPackageReference "Pitchy" */,
+				4C35D3C62F4ABD9500C859D2 /* XCRemoteSwiftPackageReference "Pitchy" */,
 			);
 			productRefGroup = D51575AC1C343B77006F8E75 /* Products */;
 			projectDirPath = "";
@@ -789,6 +811,30 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		4C35D3C02F4ABC7400C859D2 /* XCRemoteSwiftPackageReference "Pitchy" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ajc6432/Pitchy";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		4C35D3C32F4ABD6A00C859D2 /* XCRemoteSwiftPackageReference "Pitchy" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ajc6432/Pitchy";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		4C35D3C62F4ABD9500C859D2 /* XCRemoteSwiftPackageReference "Pitchy" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ajc6432/Pitchy";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		4C8039942F4AB72500CB6493 /* XCRemoteSwiftPackageReference "Nimble" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Quick/Nimble.git";
@@ -805,7 +851,15 @@
 				kind = branch;
 			};
 		};
-		4C80399A2F4AB7C500CB6493 /* XCRemoteSwiftPackageReference "Pitchy" */ = {
+		4C80399D2F4ABB9700CB6493 /* XCRemoteSwiftPackageReference "Pitchy" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ajc6432/Pitchy";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		4C8039A02F4ABBD800CB6493 /* XCRemoteSwiftPackageReference "Pitchy" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ajc6432/Pitchy";
 			requirement = {
@@ -816,6 +870,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4C35D3C12F4ABC7400C859D2 /* Pitchy */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4C35D3C02F4ABC7400C859D2 /* XCRemoteSwiftPackageReference "Pitchy" */;
+			productName = Pitchy;
+		};
+		4C35D3C42F4ABD6A00C859D2 /* Pitchy */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4C35D3C32F4ABD6A00C859D2 /* XCRemoteSwiftPackageReference "Pitchy" */;
+			productName = Pitchy;
+		};
+		4C35D3C72F4ABD9500C859D2 /* Pitchy */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4C35D3C62F4ABD9500C859D2 /* XCRemoteSwiftPackageReference "Pitchy" */;
+			productName = Pitchy;
+		};
 		4C8039952F4AB72500CB6493 /* Nimble */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 4C8039942F4AB72500CB6493 /* XCRemoteSwiftPackageReference "Nimble" */;
@@ -826,9 +895,14 @@
 			package = 4C8039972F4AB73700CB6493 /* XCRemoteSwiftPackageReference "Quick" */;
 			productName = Quick;
 		};
-		4C80399B2F4AB7C500CB6493 /* Pitchy */ = {
+		4C80399E2F4ABB9700CB6493 /* Pitchy */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4C80399A2F4AB7C500CB6493 /* XCRemoteSwiftPackageReference "Pitchy" */;
+			package = 4C80399D2F4ABB9700CB6493 /* XCRemoteSwiftPackageReference "Pitchy" */;
+			productName = Pitchy;
+		};
+		4C8039A12F4ABBD800CB6493 /* Pitchy */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4C8039A02F4ABBD800CB6493 /* XCRemoteSwiftPackageReference "Pitchy" */;
 			productName = Pitchy;
 		};
 /* End XCSwiftPackageProductDependency section */
