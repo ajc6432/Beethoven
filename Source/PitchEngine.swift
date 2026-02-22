@@ -8,10 +8,11 @@ public protocol PitchEngineDelegate: AnyObject {
   func pitchEngineWentBelowLevelThreshold(_ pitchEngine: PitchEngine)
 }
 
+public enum PitchEngineError: LocalizedError {
+  case recordPermissionDenied
+}
+
 public final class PitchEngine {
-  public enum Error: Swift.Error {
-    case recordPermissionDenied
-  }
 
   public let bufferSize: AVAudioFrameCount
   public private(set) var active = false
@@ -71,28 +72,18 @@ public final class PitchEngine {
       return
     }
 
-    let audioSession = AVAudioSession.sharedInstance()
-
-    switch audioSession.recordPermission {
-    case AVAudioSession.RecordPermission.granted:
+    switch AVAudioApplication.shared.recordPermission {
+    case .granted:
       activate()
-    case AVAudioSession.RecordPermission.denied:
-      DispatchQueue.main.async {
-        if let settingsURL = URL(string: UIApplication.openSettingsURLString) {
-            if #available(iOS 10.0, *) {
-                UIApplication.shared.open(settingsURL, options: [:], completionHandler: nil)
-            } else {
-                UIApplication.shared.openURL(settingsURL)
-            }
-        }
-      }
-    case AVAudioSession.RecordPermission.undetermined:
-      AVAudioSession.sharedInstance().requestRecordPermission { [weak self] granted  in
+    case .denied:
+      delegate?.pitchEngine(self, didReceiveError: PitchEngineError.recordPermissionDenied)
+    case .undetermined:
+      AVAudioApplication.requestRecordPermission { [weak self] granted in
         guard let weakSelf = self else { return }
 
         guard granted else {
           weakSelf.delegate?.pitchEngine(weakSelf,
-                                         didReceiveError: Error.recordPermissionDenied)
+                                         didReceiveError: PitchEngineError.recordPermissionDenied)
           return
         }
 
