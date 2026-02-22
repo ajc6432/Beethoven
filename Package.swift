@@ -1,4 +1,5 @@
 // swift-tools-version: 6.0
+
 import PackageDescription
 
 let package = Package(
@@ -7,7 +8,7 @@ let package = Package(
         .library(name: "Beethoven", targets: ["Beethoven"])
     ],
     dependencies: [
-        .package(url: "https://github.com/ajc6432/Pitchy", .branch("master")
+        .package(url: "https://github.com/ajc6432/Pitchy", from: "2.0.0")
     ],
     targets: [
         .target(name: "Beethoven", dependencies: ["Pitchy"], path: "Source")
