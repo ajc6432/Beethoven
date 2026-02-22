@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C8039962F4AB72500CB6493 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 4C8039952F4AB72500CB6493 /* Nimble */; };
+		4C8039992F4AB73700CB6493 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 4C8039982F4AB73700CB6493 /* Quick */; };
+		4C80399C2F4AB7C500CB6493 /* Pitchy in Frameworks */ = {isa = PBXBuildFile; productRef = 4C80399B2F4AB7C500CB6493 /* Pitchy */; };
 		AF3190521DABE01600C897CA /* YINTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3190511DABE01600C897CA /* YINTransformer.swift */; };
 		AFFF3FF11DB633B4004AD9D9 /* YINEstimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFF3FF01DB633B4004AD9D9 /* YINEstimator.swift */; };
 		D51575B61C343B77006F8E75 /* Beethoven.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D51575AB1C343B77006F8E75 /* Beethoven.framework */; };
@@ -39,9 +42,6 @@
 		D59CB16A1C345E0A00290B63 /* FFTTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59CB1521C345E0A00290B63 /* FFTTransformer.swift */; };
 		D59CB16B1C345E0A00290B63 /* SimpleTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59CB1531C345E0A00290B63 /* SimpleTransformer.swift */; };
 		D59CB16C1C345E0A00290B63 /* Transformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59CB1541C345E0A00290B63 /* Transformer.swift */; };
-		D5A49C751C343EC300427BF8 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5A49C731C343EC300427BF8 /* Quick.framework */; };
-		D5A49C761C343EC300427BF8 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5A49C741C343EC300427BF8 /* Nimble.framework */; };
-		D5A49CDE1C3458EA00427BF8 /* Pitchy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5A49CDD1C3458EA00427BF8 /* Pitchy.framework */; };
 		E0BF88FD1E85C31A00079F64 /* SimulatorSignalTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BF88FC1E85C31A00079F64 /* SimulatorSignalTracker.swift */; };
 /* End PBXBuildFile section */
 
@@ -91,9 +91,6 @@
 		D59CB1521C345E0A00290B63 /* FFTTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFTTransformer.swift; sourceTree = "<group>"; };
 		D59CB1531C345E0A00290B63 /* SimpleTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleTransformer.swift; sourceTree = "<group>"; };
 		D59CB1541C345E0A00290B63 /* Transformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transformer.swift; sourceTree = "<group>"; };
-		D5A49C731C343EC300427BF8 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
-		D5A49C741C343EC300427BF8 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
-		D5A49CDD1C3458EA00427BF8 /* Pitchy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pitchy.framework; path = Carthage/Build/iOS/Pitchy.framework; sourceTree = "<group>"; };
 		E0BF88FC1E85C31A00079F64 /* SimulatorSignalTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimulatorSignalTracker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,7 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5A49CDE1C3458EA00427BF8 /* Pitchy.framework in Frameworks */,
+				4C80399C2F4AB7C500CB6493 /* Pitchy in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,9 +107,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5A49C751C343EC300427BF8 /* Quick.framework in Frameworks */,
-				D5A49C761C343EC300427BF8 /* Nimble.framework in Frameworks */,
+				4C8039992F4AB73700CB6493 /* Quick in Frameworks */,
 				D51575B61C343B77006F8E75 /* Beethoven.framework in Frameworks */,
+				4C8039962F4AB72500CB6493 /* Nimble in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,7 +119,6 @@
 		D51575A11C343B77006F8E75 = {
 			isa = PBXGroup;
 			children = (
-				D55C01F41DBD1F8100575260 /* Frameworks */,
 				D51575AC1C343B77006F8E75 /* Products */,
 				D55C02031DBD210600575260 /* Project */,
 				D59CB1361C345E0A00290B63 /* Source */,
@@ -139,16 +135,6 @@
 				D51575B51C343B77006F8E75 /* Beethoven-iOS-Tests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		D55C01F41DBD1F8100575260 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D5A49C731C343EC300427BF8 /* Quick.framework */,
-				D5A49C741C343EC300427BF8 /* Nimble.framework */,
-				D5A49CDD1C3458EA00427BF8 /* Pitchy.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		D55C01F51DBD210600575260 /* Tests */ = {
@@ -395,9 +381,15 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = D51575A11C343B77006F8E75;
+			packageReferences = (
+				4C8039942F4AB72500CB6493 /* XCRemoteSwiftPackageReference "Nimble" */,
+				4C8039972F4AB73700CB6493 /* XCRemoteSwiftPackageReference "Quick" */,
+				4C80399A2F4AB7C500CB6493 /* XCRemoteSwiftPackageReference "Pitchy" */,
+			);
 			productRefGroup = D51575AC1C343B77006F8E75 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -629,7 +621,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -651,13 +644,21 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Project/Info-iOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vadymmarkov.Beethoven;
 				PRODUCT_NAME = Beethoven;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -675,13 +676,21 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Project/Info-iOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vadymmarkov.Beethoven;
 				PRODUCT_NAME = Beethoven;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -694,7 +703,11 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Project/Info-iOS-Tests.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vadymmarkov.BeethovenTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -712,7 +725,11 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Project/Info-iOS-Tests.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vadymmarkov.BeethovenTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
@@ -751,6 +768,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4C8039942F4AB72500CB6493 /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		4C8039972F4AB73700CB6493 /* XCRemoteSwiftPackageReference "Quick" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Quick.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		4C80399A2F4AB7C500CB6493 /* XCRemoteSwiftPackageReference "Pitchy" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ajc6432/Pitchy";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4C8039952F4AB72500CB6493 /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4C8039942F4AB72500CB6493 /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
+		4C8039982F4AB73700CB6493 /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4C8039972F4AB73700CB6493 /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
+		};
+		4C80399B2F4AB7C500CB6493 /* Pitchy */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4C80399A2F4AB7C500CB6493 /* XCRemoteSwiftPackageReference "Pitchy" */;
+			productName = Pitchy;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D51575A21C343B77006F8E75 /* Project object */;
 }
