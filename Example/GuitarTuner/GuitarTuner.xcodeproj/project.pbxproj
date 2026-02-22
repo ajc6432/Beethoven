@@ -140,7 +140,6 @@
 			);
 			mainGroup = D57D40F41BE95A350026B005;
 			packageReferences = (
-				4CED54152F4BB12E00099CD9 /* XCRemoteSwiftPackageReference "Beethoven" */,
 				4CED54182F4BB13800099CD9 /* XCRemoteSwiftPackageReference "Hue" */,
 				4CED541B2F4BB14600099CD9 /* XCRemoteSwiftPackageReference "Pitchy" */,
 			);
@@ -374,7 +373,7 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ajc6432/Beethoven";
 			requirement = {
-				branch = master;
+				branch = "chore/project-cleanup";
 				kind = branch;
 			};
 		};
