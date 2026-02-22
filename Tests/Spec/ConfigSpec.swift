@@ -3,7 +3,7 @@ import Quick
 import Nimble
 
 final class ConfigSpec: QuickSpec {
-  override func spec() {
+  override class func spec() {
     describe("Config") {
       var config: Config!
 

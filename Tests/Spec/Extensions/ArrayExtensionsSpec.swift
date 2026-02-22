@@ -3,7 +3,7 @@ import Quick
 import Nimble
 
 final class ArrayExtensionsSpec: QuickSpec {
-  override func spec() {
+  override class func spec() {
     describe("Array+Extensions") {
 
       describe(".fromUnsafePointer") {

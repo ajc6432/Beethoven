@@ -3,7 +3,7 @@ import Quick
 import Nimble
 
 final class BufferSpec: QuickSpec {
-  override func spec() {
+  override class func spec() {
     describe("Buffer") {
       var buffer: Buffer!
 

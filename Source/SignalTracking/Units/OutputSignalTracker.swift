@@ -36,7 +36,10 @@ final class OutputSignalTracker: SignalTracker {
 
   func start() throws {
     let session = AVAudioSession.sharedInstance()
-    try session.setCategory(AVAudioSession.Category.playback)
+
+    // Note: for some reason, playAndRecord isn't recognized by the compiler despite its existence
+    // try session.setCategory(AVAudioSession.Category.playback)
+    try session.setCategory(AVAudioSessionCategoryPlayback)
 
     audioEngine = AVAudioEngine()
     audioPlayer = AVAudioPlayerNode()

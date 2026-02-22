@@ -3,7 +3,7 @@ import Quick
 import Nimble
 
 final class EstimationFactorySpec: QuickSpec {
-  override func spec() {
+  override class func spec() {
     describe("EstimationFactory") {
       let factory = EstimationFactory()
 
