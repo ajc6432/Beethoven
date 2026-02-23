@@ -1,5 +1,5 @@
 {
-  "originHash" : "04b328337f6e3bf453394be4167dfaf2eb236369d1b65b8c9bd2c7556e4a50d3",
+  "originHash" : "c1ac3c192d1ad9028172e85fb3d22e9f0563437bad962f139b861ab25144be9e",
   "pins" : [
     {
       "identity" : "beethoven",
@@ -7,7 +7,7 @@
       "location" : "https://github.com/ajc6432/Beethoven",
       "state" : {
         "branch" : "master",
-        "revision" : "b52e0266bd98ff5a8832996776141d514b6e0116"
+        "revision" : "11d4e61feb7332ffa51798d3593f500a3c3f9b70"
       }
     },
     {
@@ -25,7 +25,7 @@
       "location" : "https://github.com/ajc6432/Pitchy",
       "state" : {
         "branch" : "master",
-        "revision" : "a28b61148694c114cb50113a351055c41e27de09"
+        "revision" : "bf41c11d86c9dcdad27be3615b099a3fc7f5effa"
       }
     }
   ],

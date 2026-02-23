@@ -6,6 +6,7 @@ import Hue
 final class ViewController: UIViewController {
   private lazy var noteLabel: UILabel = {
     let label = UILabel()
+    label.translatesAutoresizingMaskIntoConstraints = false
     label.text = "--"
     label.font = UIFont.boldSystemFont(ofSize: 65)
     label.textColor = UIColor(hex: "DCD9DB")
@@ -17,6 +18,7 @@ final class ViewController: UIViewController {
 
   private lazy var offsetLabel: UILabel = {
     let label = UILabel()
+    label.translatesAutoresizingMaskIntoConstraints = false
     label.font = UIFont.systemFont(ofSize: 28)
     label.textColor = UIColor.white
     label.textAlignment = .center
@@ -27,6 +29,7 @@ final class ViewController: UIViewController {
 
   private lazy var actionButton: UIButton = { [unowned self] in
     let button = UIButton(type: .system)
+    button.translatesAutoresizingMaskIntoConstraints = false
     button.layer.cornerRadius = 20
     button.backgroundColor = UIColor(hex: "3DAFAE")
     button.titleLabel?.font = UIFont.systemFont(ofSize: 20)
