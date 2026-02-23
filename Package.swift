@@ -3,7 +3,10 @@ import PackageDescription
 
 let package = Package(
     name: "Beethoven",
-    platforms: [.iOS(.v15)],
+    platforms: [
+        .iOS(.v18),
+        .macOS(.v14)
+    ],
     products: [
         .library(name: "Beethoven", targets: ["Beethoven"])
     ],
@@ -12,14 +15,13 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "Beethoven",
-            dependencies: ["Pitchy"],
+            name: "Beethoven", 
+            dependencies: ["Pitchy"], 
             path: "Sources/Beethoven"
         ),
-        .executableTarget(
-            name: "Example",
-            dependencies: ["Beethoven", "Pitchy"],
-            path: "Example/GuitarTuner/GuitarTuner"
+        .testTarget(
+            name: "BeethovenTests",
+            dependencies: ["Beethoven"]
         )
     ]
 )
