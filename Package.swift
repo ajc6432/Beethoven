@@ -8,11 +8,18 @@ let package = Package(
         .library(name: "Beethoven", targets: ["Beethoven"])
     ],
     dependencies: [
-        // users cloning Beethoven will fetch Pitchy automatically
         .package(url: "https://github.com/ajc6432/Pitchy.git", branch: "master")
     ],
     targets: [
-        .target(name: "Beethoven", dependencies: ["Pitchy"], path: "Sources/Beethoven"),
-        .executableTarget(name: "Example", dependencies: ["Beethoven", "Pitchy"], path: "Example")
+        .target(
+            name: "Beethoven",
+            dependencies: ["Pitchy"],
+            path: "Sources/Beethoven"
+        ),
+        .executableTarget(
+            name: "Example",
+            dependencies: ["Beethoven", "Pitchy"],
+            path: "Example/GuitarTuner/GuitarTuner"
+        )
     ]
 )
