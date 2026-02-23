@@ -40,7 +40,7 @@ final class InputSignalTracker: SignalTracker {
 
   func start() throws {
 // Note: for some reason, .playAndRecord isn't recognized by the compiler despite its existence
-//    try session.setCategory(AVAudioSession.Category.playAndRecord)
+    try session.setCategory(AVAudioSession.Category.playAndRecord)
     try session.setCategory(AVAudioSessionCategoryPlayAndRecord)
 
     // check input type

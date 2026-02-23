@@ -16,7 +16,10 @@ let package = Package(
         .target(
             name: "Beethoven", 
             dependencies: ["Pitchy"], 
-            path: "Source"
+            path: "Source",
+            swiftSettings: [
+                .swiftLanguageMode(.v6)
+            ]
         ),
         .testTarget(
             name: "BeethovenTests",
