@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "Beethoven",
     platforms: [
-        .iOS(.v18),
+        .iOS(.v18), 
         .macOS(.v14)
     ],
     products: [
@@ -17,11 +17,12 @@ let package = Package(
         .target(
             name: "Beethoven", 
             dependencies: ["Pitchy"], 
-            path: "Sources/Beethoven"
+            path: "Source"
         ),
         .testTarget(
             name: "BeethovenTests",
-            dependencies: ["Beethoven"]
+            dependencies: ["Beethoven"],
+            path: "Tests"
         )
     ]
 )
