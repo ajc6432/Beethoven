@@ -3,11 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C01F8672F4BF0CD00F9B0C3 /* Beethoven in Frameworks */ = {isa = PBXBuildFile; productRef = 4C01F8662F4BF0CD00F9B0C3 /* Beethoven */; };
+		4C01F86A2F4BF4FA00F9B0C3 /* Beethoven in Frameworks */ = {isa = PBXBuildFile; productRef = 4C01F8692F4BF4FA00F9B0C3 /* Beethoven */; };
 		4CED541A2F4BB13800099CD9 /* Hue in Frameworks */ = {isa = PBXBuildFile; productRef = 4CED54192F4BB13800099CD9 /* Hue */; };
 		4CED541D2F4BB14600099CD9 /* Pitchy in Frameworks */ = {isa = PBXBuildFile; productRef = 4CED541C2F4BB14600099CD9 /* Pitchy */; };
 		D51729C71C370D9F0077E8B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51729C31C370D9F0077E8B2 /* AppDelegate.swift */; };
@@ -31,7 +31,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CED541A2F4BB13800099CD9 /* Hue in Frameworks */,
-				4C01F8672F4BF0CD00F9B0C3 /* Beethoven in Frameworks */,
+				4C01F86A2F4BF4FA00F9B0C3 /* Beethoven in Frameworks */,
 				4CED541D2F4BB14600099CD9 /* Pitchy in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,7 +142,7 @@
 			packageReferences = (
 				4CED54182F4BB13800099CD9 /* XCRemoteSwiftPackageReference "Hue" */,
 				4CED541B2F4BB14600099CD9 /* XCRemoteSwiftPackageReference "Pitchy" */,
-				4C01F8652F4BF0CD00F9B0C3 /* XCLocalSwiftPackageReference "../../../Beethoven" */,
+				4C01F8682F4BF4FA00F9B0C3 /* XCRemoteSwiftPackageReference "Beethoven" */,
 			);
 			productRefGroup = D57D40FE1BE95A350026B005 /* Products */;
 			projectDirPath = "";
@@ -369,14 +369,15 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		4C01F8652F4BF0CD00F9B0C3 /* XCLocalSwiftPackageReference "../../../Beethoven" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = ../../../Beethoven;
-		};
-/* End XCLocalSwiftPackageReference section */
-
 /* Begin XCRemoteSwiftPackageReference section */
+		4C01F8682F4BF4FA00F9B0C3 /* XCRemoteSwiftPackageReference "Beethoven" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ajc6432/Beethoven";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		4CED54182F4BB13800099CD9 /* XCRemoteSwiftPackageReference "Hue" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/zenangst/Hue";
@@ -396,8 +397,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		4C01F8662F4BF0CD00F9B0C3 /* Beethoven */ = {
+		4C01F8692F4BF4FA00F9B0C3 /* Beethoven */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = 4C01F8682F4BF4FA00F9B0C3 /* XCRemoteSwiftPackageReference "Beethoven" */;
 			productName = Beethoven;
 		};
 		4CED54192F4BB13800099CD9 /* Hue */ = {

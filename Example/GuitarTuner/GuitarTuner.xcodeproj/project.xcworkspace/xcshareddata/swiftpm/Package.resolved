@@ -1,6 +1,15 @@
 {
-  "originHash" : "6882d9c754d47faeca71304f7e83865f15f030766f8bd1e452732164e5252a6e",
+  "originHash" : "04b328337f6e3bf453394be4167dfaf2eb236369d1b65b8c9bd2c7556e4a50d3",
   "pins" : [
+    {
+      "identity" : "beethoven",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ajc6432/Beethoven",
+      "state" : {
+        "branch" : "master",
+        "revision" : "b52e0266bd98ff5a8832996776141d514b6e0116"
+      }
+    },
     {
       "identity" : "hue",
       "kind" : "remoteSourceControl",
