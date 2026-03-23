@@ -68,7 +68,7 @@ public final class PitchEngine {
     // MARK: - Processing
 
     public func start() {
-        guard mode == .playback else {
+        if mode == .playback {
             activate()
             return
         }
